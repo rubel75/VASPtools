@@ -7,15 +7,13 @@ This bash script takes OUTCAR file, reades forces acting on each atom and produc
 ## Contact
 Please send your comments/suggestions/requests to
 
+  Oleg Rubel  
+  Department of Materials Science and Engineering
 
-Oleg Rubel
+  McMaster University
 
-Department of Materials Science and Engineering
+  JHE 359, 1280 Main Street West, Hamilton, Ontario L8S 4L8, Canada
 
-McMaster University
+  Email: rubelo@mcmaster.ca
 
-JHE 359, 1280 Main Street West, Hamilton, Ontario L8S 4L8, Canada
-
-Email: rubelo@mcmaster.ca
-
-Web: http://olegrubel.mcmaster.ca
+  Web: http://olegrubel.mcmaster.ca
