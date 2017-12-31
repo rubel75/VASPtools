@@ -7,6 +7,7 @@ This bash script takes OUTCAR file, reades forces acting on each atom and produc
 ## Contact
 Please send your comments/suggestions/requests to
 
+
   Oleg Rubel
 Department of Materials Science and Engineering
 McMaster University
