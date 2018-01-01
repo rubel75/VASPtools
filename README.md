@@ -4,6 +4,9 @@ Collection of miscellaneous scripts for VASP. Please read the header of each scr
 ## outcarf2vesta.sh
 This bash script takes OUTCAR file, reades forces acting on each atom and produces a block of *.vesta file with forces set as vectors.
 
+## read_EIGENVAL.m
+This is a MatLab script that is designed to preprocess VASP EIGENVAL file and prepare data for plotting a band structure.
+
 ## Contact
 Please send your comments/suggestions/requests to
 
