@@ -10,6 +10,9 @@ This is a MatLab script that is designed to preprocess VASP EIGENVAL file and pr
 ## prPROCAR.m
 This is an Octave script that computes a localization ratio for each DFT eigenstate based on PROCAR and POSCAR files.
 
+## PROCAR_PR2DOS.m
+This is an Octave script that is designed to assist with plotting the participation ratio data obtained with prPROCAR.m
+
 ## Contact
 Please send your comments/suggestions/requests to
 
