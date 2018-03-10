@@ -7,6 +7,9 @@ This bash script takes OUTCAR file, reades forces acting on each atom and produc
 ## read_EIGENVAL.m
 This is a MatLab script that is designed to preprocess VASP EIGENVAL file and prepare data for plotting a band structure.
 
+## prPROCAR.m
+This is an Octave script that computes a localization ratio for each DFT eigenstate based on PROCAR and POSCAR files.
+
 ## Contact
 Please send your comments/suggestions/requests to
 
