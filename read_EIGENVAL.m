@@ -66,7 +66,7 @@ end
 
 % write output file in CSV format
 M = [K kpt eig]; % dk, kptX, kptY, kptZ, eig1, eig2, ...
-csvwrite('vasp_bs.csv',M);
+dlmwrite('vasp_bs.csv', M, 'delimiter', ',', 'precision', 9);
 
 % summary
 disp('number of k-points')
