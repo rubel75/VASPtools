@@ -15,7 +15,7 @@ function read_EIGENVAL
 %     + vasp_bs.csv -- a comma separated file with data written in the
 %     following format: dk, kptX, kptY, kptZ, eig1, eig2, ...
 %
-% (c) Oleg Rubel (last modified 1 Jan 2018)
+% (c) Oleg Rubel (last modified 18 Feb 2020)
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 clear all;
@@ -66,7 +66,7 @@ end
 
 % write output file in CSV format
 M = [K kpt eig]; % dk, kptX, kptY, kptZ, eig1, eig2, ...
-csvwrite('vasp_bs.csv',M);
+dlmwrite('vasp_bs.csv', M, 'delimiter', ',', 'precision', 9);
 
 % summary
 disp('number of k-points')

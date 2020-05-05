@@ -97,28 +97,19 @@ while (! feof (fid) ) % loop untill the end of file
   if strfind(txt,"ion") % get densities per atoms
     txt = strsplit(txt); % remove trailing whitespace
     ncol = length(txt); % number of columns
-    rho = zeros(iontot,ncol);
+    rho = zeros(1,iontot);
     for j = 1:iontot
-      txt = fgetl (fid);
+      txt = fgetl (fid); % read probabilities if finding an electron in the vicintity of specific atoms
       txt = str2num(txt);
-      rho(j,:) = txt;
+      rho(j) = txt(end); % only last (total probability) value is important (others are s-, p-, etc. projections)
     end
-    sumrhoj = zeros(1,length(ionnum));
-    sum2rhoj = sumrhoj; sumrhoj2 = sumrhoj; prj = sumrhoj;
-    for j = 1:length(ionnum) % loop over the same type of ions
-      if j == 1
-        rhoj = rho(1:ionnum(j),end);
-      else
-        rhoj = rho(sum(ionnum(1:j-1))+1:sum(ionnum(1:j)),end);
-      end
-      sumrhoj(j) = sum(rhoj);
-      sum2rhoj(j) = (sum(rhoj))^2;
-      sumrhoj2(j) = (sum(rhoj.^2));
-      if sum2rhoj(j) ~= 0 % else prj = 0
-        prj(j) = sumrhoj2(j)/sum2rhoj(j);
-      end
+    sum2rho = (sum(rho))^2;
+    sumrho2 = (sum(rho.^2));
+    if sum2rho ~= 0 % avoid x/0
+      pr = sumrho2/sum2rho;
+    else
+      pr = NaN;
     end
-    pr = sum(prj.*sumrhoj)/sum(sumrhoj);
     fprintf(fid_out,"%f %f %f\n", eig, kpwgt, pr);
     bnread = bnread + 1;
     if any(bnbins==bnread) % update waitbar
